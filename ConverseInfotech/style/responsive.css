@@ -71,9 +71,7 @@
 	.quote-intro .accent-btn{
 	text-align: center;
 	}
-	.services .service-item, .team .team-box, .news-section .news-box, .our-process .inner-box, .icon-box-container{
-		margin-bottom: 40px;
-	}
+	
 	.projects-list.isotope{
 		width: 750px;
 	}
@@ -101,7 +99,9 @@
 
 }
 @media (max-width: 767px) {
-
+	.header-menu .container{
+		padding: 0;
+	}
 	.header-info{
 		display: none;
 	}
@@ -109,16 +109,38 @@
 		display: none;
 	}
 	.main-header .nav-outer {
-    padding-right: 0px;
-    text-align: center;
-}
+	    padding-right: 0px;
+	    text-align: center;
+	}
 	.logo {
-		float: none;
-		text-align: center;
+		float: left;
+		padding: 0px;
+		height: auto;
+		width: 200px;
+	}
+	.navbar-default .navbar-brand.logo,.navbar-default .navbar-brand.logo:hover{
+		background: #fff;
+		padding: 6px;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{
+		background: transparent;
+	}
+	.navbar-nav{
+		text-align: left;
 	}
 	.navbar-default .navbar-toggle {
-		margin-top: 13px;
-		float: none;
+		color: #fff;
+		border-color: #fff;
+		border: 0;
+		font-size: 18px;
+		padding: 0;
+		height: 35px;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a,.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{
+		color: #fff;
+	}
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus{
+		background: #038875
 	}
 	.navbar-nav > li > a {
 	padding: 5px 15px !important;
@@ -140,32 +162,39 @@
 	padding: 5px 20px;
 	text-transform: inherit;
 	}
-	#slider .item.slider-pic {
-    	height: 400px;
+	.carousel {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+}
+.carousel-caption{
+	width: 100%;
+	left: 0;
+	top: 0%;
+	padding: 20px 40px;
+	padding: 20px;
+}
+.carousel-caption .caption-title{
+	padding: 0;
+	text-align: center;
+}
+.carousel-caption .caption-title h2{
+	font-size: 16px;
+	line-height: 16px;
+}
+.carousel-caption .caption-title hr,
+.carousel-caption p{
+	display: none;
+}
+.services .service-item, .team .team-box, .news-section .news-box, .our-process .inner-box, .icon-box-container{
+		margin-bottom: 40px;
+		padding-left: 30px;
 	}
-	.slider-content-box{
-		max-width: 300px;
-		top: 35%;
-		left: calc(50% - 250px);
-		padding-bottom: 0px;
+	.our-process h3{
+		font-size: 25px;
 	}
-	.slider-content-box h2 {
-		font-size: 16px;
-		font-weight: 500;
-		line-height: 26px;
-		padding: 11px 18px 11px;
-	}
-	.slider-content-box h2:before{
-		margin-left: 20px;
-		top: 4.5em;
-	}
-	.slider-content-box p {
-		font-size: 13px;
-		line-height: 21px;
-		padding: 13px 18px 15px;
-	}
-	.slider-content-box .accent-btn {
-		display: none;
+	.count{
+		font-size: 60px
 	}
 	.about-us-img h2{
 		font-size: 26px;
@@ -178,6 +207,28 @@
 	    width: 100%;
 	    margin: 0 0 30px;
 	}
+	.nav-justified > li{
+		width: calc(100% /4 - 10px);
+display: inline-block
+	}
+	.tabs-intro .nav-justified > li > a{
+		font-size: 13px;
+		padding:5px;
+	}
+	.tabs-intro .nav-pills > li.active > a::after {
+		width: 8px;
+height: 8px;
+	}
+	section{
+		padding-top: 40px;
+	}
+	.services-wrapp .services-post {
+		margin-top: 10px;
+    padding: 0 15px;
+}
+.section-box{
+	margin-bottom: 50px
+}
 }
 @media (max-width: 500px) {
 	#slider .item.slider-pic {

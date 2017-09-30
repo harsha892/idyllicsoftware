@@ -1,4 +1,5 @@
-html,body {
+@charset "utf-8";
+body {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     color: #777777;
@@ -91,6 +92,7 @@ h6 {
     letter-spacing: -0.05em;
     font-family: 'Montserrat', sans-serif;
     margin: 0 0 15px 0;
+
     background: none;
     line-height: 1.6em;
 }
@@ -172,6 +174,12 @@ h6 {
     background-color: transparent;
 }
 
+/*-------------------------------------------------*/
+
+
+/* =  Header
+/*-------------------------------------------------*/
+
 .main-header {
     position: relative;
     left: 0px;
@@ -218,6 +226,8 @@ h6 {
     font-size: 13px;
     line-height: 2em;
 }
+
+/* --- Upper HEADER --- */
 
 .upper-header {
     background-color: #FFFFFF;
@@ -484,11 +494,141 @@ h6 {
     text-transform: uppercase;
 }
 
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------*/
+
+
+/* =  Slider
+/*-------------------------------------------------*/
+
+.owl-carousel {
+    overflow: hidden;
+}
+
 .carousel {
     position: relative;
     height: 400px;
     overflow: hidden;
 }
+
+.slider-pic img {
+    min-width: 107%;
+    max-width: 107%;
+}
+
+.owl-buttons {
+    position: static;
+}
+
+.owl-prev {
+    left: 30px;
+}
+
+.owl-next {
+    right: 0px;
+}
+
+.top-slider .owl-theme .owl-controls {
+    margin-top: -2px !important;
+}
+
+.top-slider .owl-prev {
+    left: 0px;
+}
+
+.top-slider .owl-prev,
+.top-slider .owl-next {
+    top: 50%;
+    background-color: #453f84!important;
+    width: 52px;
+    height: 52px;
+    line-height: 52px;
+    border: 0;
+    border-radius: 0 3px 3px 0!important;
+    -webkit-transition: background-color .3s ease-in-out;
+    -o-transition: background-color .3s ease-in-out;
+    transition: background-color .3s ease-in-out;
+}
+
+.owl-prev,
+.owl-next {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    color: #FFF!important;
+    background: transparent !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center;
+    line-height: 70px;
+    font-size: 30px!important;
+    border: 1px solid #E2E6E7;
+    top: 43%;
+    font-size: 24px;
+    z-index: 1;
+    opacity: 0.4;
+    border-radius: 50% !important;
+    -moz-border-radius: 50% !important;
+    -webkit-border-radius: 50% !important;
+    transition: all 0.2s ease 0s;
+    -webkit-transition: all 0.2s ease 0s;
+    -moz-transition: all 0.2s ease 0s;
+}
+
+.owl-dot {
+    padding: 6px 2px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    width: 8px;
+    height: 8px;
+    display: block;
+    position: relative;
+    margin: 5px 3px;
+    z-index: 1000 !important;
+    border: none;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -moz-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -o-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    -ms-transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+    transition: all 0.27s cubic-bezier(0.000, 0.000, 0.580, 1.000);
+}
+
+.owl-dot:hover span {
+    background: rgba(0, 0, 0, .5);
+}
+
+.owl-dot.active span {
+    background: #038875 !important;
+    border: 1px solid #038875 !important;
+    -webkit-transform: scale(1.3333333);
+    -moz-transform: scale(1.3333333);
+    -o-transform: scale(1.3333333);
+    -ms-transform: scale(1.3333333);
+    transform: scale(1.3333333);
+}
+
+
+
+
+
+
+
+
+
+
 
 /* --- slider content label --- */
 
@@ -518,6 +658,7 @@ hr.stripe {
     background: #453f84;
     border: 0;
     border-radius: 3px;
+    ;
 }
 
 .carousel-caption p {
@@ -542,6 +683,15 @@ hr.stripe {
     color: #038875;
 }
 
+/*-------------------------------------------------*/
+
+
+/* =  content - home sections
+/*-------------------------------------------------*/
+
+
+/* --- sections title --- */
+
 .section-title h2 {
     margin-bottom: 40px;
     font-size: 36px;
@@ -561,6 +711,8 @@ hr.stripe {
     -ms-border-radius: 3px;
     border-radius: 3px;
 }
+
+/* --- quote --- */
 
 .tabs-intro {
     padding: 0;
@@ -733,6 +885,8 @@ hr.stripe {
     align-items: center;
     font-size: 18px;
 }
+
+/* --- Facts --- */
 
 .fun-facts {
     background-color: #453f84;
@@ -1128,6 +1282,8 @@ section.testimonials {
 }
 
 /*-------------------------------------------------*/
+
+
 /* =  single service page
 /*-------------------------------------------------*/
 
@@ -1335,6 +1491,8 @@ section.testimonials {
 }
 
 /*-------------------------------------------------*/
+
+
 /* =  single project page
 /*-------------------------------------------------*/
 
@@ -1515,6 +1673,290 @@ section.testimonials {
 }
 
 /*-------------------------------------------------*/
+
+
+/* =  Blog
+/*-------------------------------------------------*/
+
+.blog-section .blog-posts .blog-post {
+    margin-bottom: 40px;
+}
+
+.blog-section .blog-posts .blog-post img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.blog-section .blog-posts .blog-post h3 {
+    text-transform: uppercase;
+    font-size: 20px;
+    margin: 5px 0 10px 0;
+}
+
+.blog-section .blog-posts .blog-post ul.entry-meta {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+}
+
+.blog-section .blog-posts .blog-post ul.entry-meta li {
+    display: inline;
+    color: #666666;
+    font-size: 13px;
+    font-style: italic;
+    margin-right: 4px;
+}
+
+.blog-section .blog-posts .blog-post ul.entry-meta li a {
+    display: inline;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    color: #666666;
+}
+
+.blog-posts .blog-post .accent-btn a:hover {
+    border-color: #453f84;
+    color: #453f84;
+}
+
+.blog-section .blog-posts .blog-post ul.entry-meta li a:hover {
+    color: #222222;
+}
+
+.blog-section .blog-posts .pager {
+
+    margin-bottom: 0;
+    padding-top: 10px;
+}
+
+.blog-section .blog-posts .pager li>a {
+    display: inline-block;
+    padding: 5px 14px;
+    color: #453f84;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+}
+
+.blog-section .blog-posts .pager li>a:focus,
+.blog-section .blog-posts .pager li>a:hover {
+    background-color: #453f84;
+    color: #FFF;
+    text-decoration: none;
+}
+
+.blog-section .blog-posts .blog-post blockquote {
+    font-family: 'Gerogia', serif;
+    font-size: 18px;
+    font-style: italic;
+    color: #222;
+}
+
+/* -----comments---- */
+
+.blog-section .blog-posts .comments-section h3 {
+    margin-bottom: 45px;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box {
+    overflow: hidden;
+    border-bottom: 1px solid #e6e6e6;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box h4 {
+    display: block;
+    text-transform: capitalize;
+    font-size: 15px;
+    line-height: 15px;
+    color: #000;
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box span.date {
+    display: block;
+    font-size: 13px;
+    margin-bottom: 7px;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box span.reply a {
+    float: right;
+    font-size: 13px;
+    text-decoration: underline;
+    color: #888;
+    margin-bottom: 5px;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box img {
+    width: auto;
+    max-width: 100px;
+    border-radius: 50%;
+    float: left;
+}
+
+.blog-section .blog-posts .comments-section ul li .comment-box .comment-text {
+    margin-left: 100px;
+    padding-right: 20px;
+}
+
+.blog-section .blog-posts .comments-section ul.depth .comment-box {
+    padding-left: 60px;
+}
+
+.comment-form input,
+.contact-form input {
+    margin-bottom: 25px;
+}
+
+.comment-form textarea,
+.contact-form textarea {
+    height: 165px;
+    resize: none;
+}
+
+.contact-form button,
+.comment-form button {
+    margin-top: 20px;
+}
+
+.contact-form button:hover,
+.comment-form button:hover {
+    border-color: #453f84;
+    background-color: transparent;
+    color: #453f84;
+}
+
+.comment-form input:focus,
+.contact-form input:focus,
+.comment-form textarea:focus,
+.contact-form textarea:focus {
+    border: 1px solid #453f84;
+}
+
+/*-------------------------------------------------*/
+
+
+/* =  Widgets
+/*-------------------------------------------------*/
+
+.widget {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.widget-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.widget-title h4 {
+    text-transform: uppercase;
+    color: #444444;
+    font-size: 16px;
+    margin: 0;
+}
+
+.widget-title .stripe:after,
+.services-post .stripe:after {
+    margin: 11px 0 0 0;
+}
+
+.widget ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.widget ul li {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.widget a {
+    text-decoration: none;
+    color: #777;
+}
+
+.footer-widget a {
+    text-decoration: none;
+    color: #ACACAD;
+}
+
+.widget a:hover,
+.footer-widget a:hover {
+    color: #a5d4ce!important;
+}
+
+/* -----search widget---- */
+
+.search-form button {
+    background: #ffffff;
+    border: none;
+    float: right;
+    margin-top: -32px;
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* -----tagcloud widget---- */
+.tagcloud ul {
+    padding: 0;
+}
+.tagcloud ul li {
+    display: inline-block;
+    margin: 0px 7px 7px 0px !important;
+}
+
+.tagcloud a {
+    display: inline-block;
+    color: #777;
+    border: 1px solid #888;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 12px;
+}
+
+.footer-widget .tagcloud a {
+    color: #ACACAD;
+}
+
+/* -----post list widget---- */
+
+.sidebar .post-list {
+    overflow: hidden;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar .post-list img {
+    max-width: 100%;
+    float: left;
+    margin-right: 15px;
+}
+
+.sidebar .post-list h6 {
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+.sidebar .post-list span.date {
+    color: #AAA;
+    font-size: 13px;
+    margin-top: 5px;
+    display: block;
+}
+
+/*-------------------------------------------------*/
+
+
 /* =  Contact page
 /*-------------------------------------------------*/
 
@@ -1560,10 +2002,13 @@ section.testimonials {
 
 
 /*-------------------------------------------------*/
+
+
 /* =  Footer
 /*-------------------------------------------------*/
 
 .main-footer {
+
     background-color: #242427;
     padding: 80px 0px;
 }
@@ -1588,9 +2033,7 @@ footer .main-footer .footer-nav li {
     list-style: none;
     padding: 8px 0px
 }
-footer .main-footer a{
-    color: #c7c7c7
-}
+
 /* --------from the blog links widget-------------*/
 footer .main-footer .lasts-posts{
     padding: 0;
