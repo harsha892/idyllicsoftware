@@ -2,16 +2,6 @@
     <div class="main-footer">
         <div class="container">
             <div class="row">
-                <div class="col-md-3 col-sm-6 col-xs-12">
-                    <div class="footer-widget">
-                        <div class="widget-title">
-                            <h4>About Converse Infotech</h4>
-                        </div>
-                        <div class="text-box">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit accusamus labore dolore, vero rem magnam, ex itaque debitis autem inventore, neque sint laborum cum aliquam reprehenderit enim eaque hic harum.</p>
-                        </div>
-                    </div>
-                </div>
                 <div class="col-md-3 col-sm-6 col-xs-6">
                     <div class="footer-widget">
                         <div class="widget-title">
@@ -55,14 +45,40 @@
                 <div class="col-md-3 col-sm-6 col-xs-12">
                     <div class="footer-widget">
                         <div class="widget-title">
+                            <h4>Address</h4>
+                        </div>
+                        <div class="text-box">
+                            <address>18th floor, Cyber one,
+                                <br/> CIDCO exhibition centre,
+                                <br/>Sector 30, Vashi, Navi Mumbai 400703
+                            </address>
+                            <p> Ph:+912230018325
+                                <br> +912230018397</p>
+                            <p> Mail Us: info@converseit.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="footer-widget">
+                        <div class="widget-title">
                             <h4>Contact Us</h4>
                         </div>
                         <div class="text-box">
-                            <address>3rd floor, The Pavillion,
-                                <br/> near Hotel Radha, opp Sadanand hotel,
-                                <br/> Pune-Mumbai Highway, Pune 411045</address>
-                            <p>Mail us: info@converseit.com</p>
-                            <p> Contact: 020 326 000 41 / 42</p>
+                            <form action="includes/sendemail.php" class="contact-form" novalidate="novalidate">
+                                <div class="form-group">
+                                    <label class="sr-only" for="">label</label>
+                                    <input name="name" placeholder="Your Name" type="text">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="">label</label>
+                                    <input name="email" placeholder="Your Email" type="email">
+                                </div>
+                                <div class="form-group">
+                                    <label class="sr-only" for="">label</label>
+                                    <textarea name="message" placeholder="Message"></textarea>
+                                </div>
+                                <button type="submit" class="submit">submit now</button>
+                            </form>
                         </div>
                     </div>
                 </div>
