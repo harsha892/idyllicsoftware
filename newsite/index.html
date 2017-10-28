@@ -11,7 +11,7 @@
     <link href="styles/bootstrap/bootstrap.css" rel="stylesheet" type="text/css">
     <!-- <link href="plugins/ionicons-2.0.1/ionicons.css" rel="stylesheet" type="text/css">
  -->
-    <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" rel="stylesheet" type="text/css">
     <!-- <link href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" rel="stylesheet" type="text/css">
  -->
@@ -21,6 +21,11 @@
 <link href="plugins/parallaxslider/parallaxslider.css" rel="stylesheet" type="text/css"> -->
     <link href="styles/main_styles.css" rel="stylesheet" type="text/css">
     <link href="styles/responsive.css" rel="stylesheet" type="text/css">
+    <style>
+    .carousel-inner>.item>img {
+        width: 100%;
+    }
+    </style>
 </head>
 
 <body>
@@ -56,19 +61,27 @@
         <!-- HOME SECTION -->
         <section id="home">
             <div class="slider_container">
-                <div id="myparallaxslider" class="parallaxslider">
-                    <div class="slide">
-                        <div class="bgoverlay slider_bg slider_bg_1" data-order="1"></div>
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images/project_1.jpg" alt="Los Angeles">
+                        </div>
+                        <div class="item">
+                            <img src="images/project_3.jpg" alt="Chicago">
+                        </div>
+                        <div class="item">
+                            <img src="images/project_2.jpg" alt="New York">
+                        </div>
                     </div>
-                    <div class="slide">
-                        <div class="bgoverlay slider_bg slider_bg_2" data-order="2"></div>
-                    </div>
-                    <div class="slide">
-                        <div class="bgoverlay slider_bg slider_bg_3" data-order="3"></div>
-                    </div>
-                    <div class="slide">
-                        <div class="bgoverlay slider_bg slider_bg_4" data-order="4"></div>
-                    </div>
+                    <!-- Left and right controls 
+                    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+					    <span class="glyphicon glyphicon-chevron-left"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+                    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+					    <span class="glyphicon glyphicon-chevron-right"></span>
+					    <span class="sr-only">Next</span>
+					 </a>-->
                 </div>
             </div>
             <div class="slider_overlay">
@@ -77,98 +90,18 @@
             </div>
             <div class="main_slider_nav">
                 <div class="main_slider_nav_inner">
-                    <div class="main_nav_position">
-                        <div id="asd" class="main_nav_position_inner trans_200">
-                            1 &nbsp;of &nbsp;4
-                        </div>
-                    </div>
                     <div class="main_nav_arrows">
                         <div class="main_nav_arrows_inner">
-                            <div class="main_nav_left"><i class="icon ion-play arrow_left trans_200"></i></div>
-                            <div class="main_nav_right"><i class="icon ion-play trans_200"></i></div>
+                            <a class="" href="#myCarousel" data-slide="prev"><i class="fa fa-angle-left fa-2x"></i></a>
+                            <a class="" href="#myCarousel" data-slide="next"><i class="fa fa-angle-right fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="home_content">
-                <h1>Welcome to our site name</h1>
-                <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer.</p>
+                <h1>Welcome to our sitename</h1>
+                <p>We delivers next-generation technology solutions.</p>
                 <div class="button_a about_link_button scroll_to_button trans_200" data-scroll-to="#about">about us</div>
-            </div>
-        </section>
-        <!-- ABOUT SECTION -->
-        <section id="about" class="light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div class="section_title">
-                            <h1>Who We Are</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <div class="about_us_link hvr" data-color-enter="#717a85" data-color-leave="#00bcd5">
-                            <!-- <a href="about.html">more&nbsp;about&nbsp;us</a> -->
-                        </div>
-                    </div>
-                </div>
-                <div class="row feature_cards">
-                    <div class="col-md-4 feature_card">
-                        <div class="feature_card_content trans_200">
-                            <i class="material-icons">fingerprint</i>
-                            <h3>Experience</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature_card">
-                        <div class="feature_card_content trans_200">
-                            <i class="material-icons">send</i>
-                            <h3>Flexibility</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 feature_card">
-                        <div class="feature_card_content trans_200">
-                            <i class="material-icons">graphic_eq</i>
-                            <h3>Reliability</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 text-center feature_cards_text">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                        <div class="button_b contact_button_1 scroll_to_button trans_200" data-scroll-to="#contact">contact us</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- SERVICES SECTION -->
-        <section id="services">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6 services_col_left">
-                        <div class="service_item trans_200">
-                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
-                            <h3>Branding</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                        </div>
-                        <div class="service_item trans_200">
-                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
-                            <h3>Illustration & Animation</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-6 services_col_right">
-                        <div class="service_item trans_200">
-                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
-                            <h3>UX / UI Design</h3>
-                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters.</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
         <!-- ABOUT EXTRA SECTION -->
@@ -182,27 +115,184 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-md-5 col-md-offset-7 about_extra">
-                                <h3>Some days you get the bear, and some days bear gets you</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                                <div class="button_line button_line_1"><a href="#">learn more<i class="material-icons">keyboard_arrow_right</i></a></div>
+                                <h3>About US</h3>
+                                <p>Link Systems, delivers next-generation technology solutions to help clients solve complex business challenges, improve organizational effectiveness, increase business productivity, realize sustainable enterprise value and transform your business inside-out. iLink integrates software systems and develops custom applications, components, and frameworks on the latest platforms for IT departments, commercial accounts, application services providers (ASP) and independent software vendors (ISV). iLink solutions are used in a broad range of industries and functions, including healthcare, telecom, government, oil and gas, education, and life sciences. iLink’s expertise includes Cloud Computing & Application Modernization, Data Management & Analytics, Enterprise Mobility, Portal, collaboration & Social Employee Engagement, Embedded Systems and User Experience design etc.</p>
+                                <!-- <p>
+                                    What makes iLink Systems’ offerings unique is the fact that we use pre-created frameworks, designed to accelerate software development and implementation of business processes for our clients. iLink has over 60 frameworks (solution accelerators), both industry-specific and horizontal, that can be easily customized and enhanced to meet your current business challenges.</p>
+                                <div class="button_line button_line_1"><a href="#">learn more<i class="material-icons">keyboard_arrow_right</i></a></div> -->
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- PURCHASE SECTION -->
+        <!-- ABOUT SECTION -->
+        <section id="about" class="light">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="section_title">
+                            <h1>Why Customers Work With Us</h1>
+                            <p>High Quality and Process Oriented Team. Innovative, Proactive and Customer-driven.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="about_us_link hvr" data-color-enter="#717a85" data-color-leave="#00bcd5">
+                            <!-- <a href="about.html">more&nbsp;about&nbsp;us</a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row feature_cards">
+                    <div class="row">
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-cloud fa-4x"></i>
+                                <h3>Cloud Services</h3>
+                                <p>iLink, a specialized Cloud solutions provider, offers custom cloud solutions to help organizations, ranging from small to Fortune 50, improve IT flexibility and efficiency, reduce deployment costs and manage operations on a global scale.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-mobile fa-4x"></i>
+                                <h3>Mobility</h3>
+                                <p>iLink, a specialized Mobile Application Development partner and winner of 2011 Microsoft Partner of the Year Award, offers solutions across multiple platforms including iOS, Android, Windows Phone, Blackberry, Symbian OS and Bada. </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-area-chart fa-4x"></i>
+                                <h3>Data Management</h3>
+                                <p>iLink offers deep expertise in EIM that encompasses services like data integration, Reporting & Dashboarding, Metadata Management, Data Quality management, Advanced analytics and Big Data Integration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-cube fa-4x"></i>
+                                <h3>Product Development</h3>
+                                <p>As a trusted Product Development Partner, iLink is helping ISVs, Software Product companies and Start-ups worldwide develop next-generation software products, reduce costs and shorten product time to market while ensuring high quality</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-server fa-4x"></i>
+                                <h3>Managed Services</h3>
+                                <p>iLink offers turnkey, IT Managed Service Solution that caters to the increasing demands of today’s IT industry. With iLink’s managed service solution, we take care of your complete IT Services or specific components end to end</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 feature_card">
+                            <div class="feature_card_content trans_200">
+                                <i class="fa fa-users fa-4x"></i>
+                                <h3>Social</h3>
+                                <p>iLink’s Intranet-as-a-service offering, The HUB, is the next-generation (cloud and on premise) employee engagement platform where your employees can innovate, network, collaborate, converse, engage and do more.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- SERVICES SECTION -->
+        <section id="services">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="section_title">
+                            <h1>Our Software Solutions</h1>
+                            <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>HEALTH AND LIFE SCIENCES</h3>
+                            <p>iLink’s HLS practice helps Health and Life Sciences organizations improve quality while keeping the costs down. We add business value by reducing operational expense, improve customer experience and increase performance.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>COMMUNICATION</h3>
+                            <p>iLink communications sector practice is dedicated to providing industry leading solutions to telecommunication wireless, wireline, cable, media, entertainment, digital marketing, broadcasting, hosting, and satellite and gaming companies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>BANKING AND FINANCIAL</h3>
+                            <p>iLink’s offers custom solutions to Banking and Financial Services organizations to help them modernize their legacy applications, get great insight into risks and performance, reduce operational costs and improve customer loyalty.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>MANUFACTURING</h3>
+                            <p>iLink offers a wide variety of technology solutions to manufacturers to help them optimize overall operations, increase manufacturing efficiency, quality and profit margins, improve employee productivity, reduce costs & unnecessary downtime.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>RETAIL</h3>
+                            <p>iLink understands the way retail industry functions and provides a wide variety of solutions to retailers meet changing demands, maximize customer service & experience, improve & optimize overall operations, reduce costs and increase revenue.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="service_item trans_200">
+                            <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                            <h3>GOVERNMENT</h3>
+                            <p>Link understands the current environment of Government sector and addresses the key technology issues & challenges faced by the Federal Government, State & Local Governments, and Worldwide Public Safety & National Security focused organizations.</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <!--         <section id="services2">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <div class="section_title">
+                    <h1>Top Industries We Serve To</h1>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="service_item trans_200">
+                    <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                    <h3>HEALTH AND LIFE SCIENCES</h3>
+                    <p>iLink’s HLS practice helps Health and Life Sciences organizations improve quality while keeping the costs down. We add business value by reducing operational expense, improve customer experience and increase performance.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="service_item trans_200">
+                    <a href="#"><img src="images/arrow_28.png" alt=""></a>
+                    <h3>COMMUNICATION</h3>
+                    <p>iLink communications sector practice is dedicated to providing industry leading solutions to telecommunication wireless, wireline, cable, media, entertainment, digital marketing, broadcasting, hosting, and satellite and gaming companies.</p>
+                </div>
+            </div>
+        </div>
+</section> -->
+        <!-- PURCHASE SECTION 
         <section id="purchase">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12 text-center">
-                        <h3>A New text Feild</h3>
-                        <p>flair is what marks the difference between artistry and mere competence</p>
-</div>
+                        <h3>High Quality and Process Oriented Team. <br>Innovative, Proactive and Customer-driven.</h3> </div>
                 </div>
             </div>
-        </section>
-        <!-- STEPS SECTION -->
+        </section>-->
+        <!-- STEPS SECTION 
         <section id="steps" class="dark">
             <div class="container">
                 <div class="row">
@@ -298,7 +388,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section>-->
         <!-- FEATURES SECTION -->
         <section id="features" class="light">
             <div class="features_background">
@@ -308,23 +398,62 @@
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2">
                             <div class="section_title">
-                                <h1>our Services</h1>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+                                <h1>Information Management</h1>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="container features_content">
                     <div class="row">
-                        <div class="col-md-6 col-md-push-6 features_image">
+                        <div class="col-md-6">
+                            <p>
+                                iLink offers end to end Data management services that cover the entire cycle of enterprise information management. iLink has Data Management Practitioners who are specialized in Architecture, Design and Implementation of large Enterprise Data Warehouses for several Banking and Insurance customers. Have successfully led EDW implementations leveraging Custom models and industry standard data models such as Teradata-FSLDM/IBM-BDW. Extensive experience in building reference architectures for all aspects of Enterprise Information Management. Also have established and managed large managed services model engagements to Support and maintain large Warehouses in a global delivery model.
+                            </p>
+                            <p>
+                                The right information architecture lays the foundation for the capture and use of your data for your enterprise goals. We have in house frameworks to assess your current information architecture and lay out a data strategy roadmap that would provide competitive advantage through cutting edge enterprise information management architecture aligning to your business needs. We approach Information architecture with focus to all aspects of Information management such as robust data model design, Reusable Data quality framework, Ease of use Metadata strategy etc.
+                            </p>
+                        </div>
+                        <div class="col-md-6">
                             <img src="images/laptop.png" alt="">
                         </div>
-                        <div class="col-md-6 col-md-pull-6 features_text">
-                            <h4>For an android with no feelings, he sure managed to evoke them in others.</h4>
-                            <p>I will obey your orders. I will serve this ship as First Officer. And in an attack against the Enterprise, I will die with this crew. But I will not break my oath of loyalty to Starfleet.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="features" class="">
+            <div class="features_background">
+            </div>
+            <div class="features_inner">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-8 col-md-offset-2">
+                            <div class="section_title">
+                                <h1>Business Intelligence</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container features_content">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="images/laptop.png" alt="">
+                        </div>
+                        <div class="col-md-6">
+                            <p>
+                                The leadership team needs the right information at the right time or real time to sustain & beat the competition. They have limited time to review data in spreadsheet form to understand trends and gain insights. Visual depiction of Numbers and trends is important to view information with a context and enable quick decision making. Business Intelligence (BI) tools come into play for that purpose and help the users to create reports, dashboards and scorecards for their own analysis and also to present them in a visual format to the leadership team. There are many BI tools in the market such Business Objects, Cognos etc. These report tools have capabilities to enable self-service reporting to business users
                             </p>
-                            <p>I'm afraid I still don't understand, sir. For an android with no feelings, he sure managed to evoke them in others. Computer, lights up! Mr. Crusher, ready a collision course with the Borg ship. </p>
-                            <div class="button_line button_line_2"><a href="#">learn more<i class="material-icons">keyboard_arrow_right</i></a></div>
+                            <h4>
+                                We can help you with end-to-end Business Intelligence Solution delivery.
+                            </h4>
+                            <ul>
+                                <li>BI Architecture</li>
+                                <li>BI Development – Reports/Dashboards/Scorecards</li>
+                                <li>BI Tool Evaluation and Selection</li>
+                                <li>BI Tool Migration or Upgrades (Business Objects, Cognos etc)</li>
+                                <li>Reporting Testing Automation</li>
+                                <li>In Memory BI (Qlikview/Tableau/Microsoft Tabular)</li>
+                                <li>BI Performance tuning & Optimization</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -376,10 +505,15 @@
                 </div>
             </div>
         </section>
-    </div>
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="styles/bootstrap/bootstrap.js"></script>
-    <script src="js/custom.js"></script>
+        </div>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="styles/bootstrap/bootstrap.js"></script>
+        <script src="js/custom.js"></script>
+        <script>
+        $('.carousel').carousel({
+            interval: 2000
+        })
+        </script>
 </body>
 
 </html>
