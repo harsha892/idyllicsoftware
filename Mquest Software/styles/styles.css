@@ -678,7 +678,7 @@ p {
     margin-bottom: 0px;
 }
 
-.service_item a {
+/* .service_item a {
     display: block;
     position: absolute;
     box-sizing: border-box;
@@ -698,7 +698,7 @@ p {
 .service_item:hover a {
     opacity: 1;
     right: 30px;
-}
+} */
 
 #about {
     padding-top: 120px;
@@ -1014,14 +1014,38 @@ footer hr {
 .no-pading {
     padding: 0;
 }
-
+.no-margin{
+    margin: 0!important;
+}
+.text-white{
+    color: #fff!important;
+}
 .c-light-blue {
     color: #0ccfe9;
 }
 
 .page_heading {
     margin-top: 100px;
-    padding: 20px;
+    padding: 25px 20px;
     text-align: center;
     background: #fff;
+}
+.special_area{
+    background-color: #00bcd5;
+    padding: 25px 0;
+    margin-bottom: 10px;
+}
+.special_area_dark{
+    background-color: #282828;
+    padding: 25px 0;
+    color: #fff;
+}
+.text-left{
+    text-align: left!important;
+}
+.tech_list li {
+    background-color: #f7f7f7;
+    padding: 10px;
+    margin: 8px;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
 }
