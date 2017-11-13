@@ -239,7 +239,9 @@ p {
 .nav-styles .navbar-nav>li>a {
     padding-top: 11px;
 }
-
+.nav-styles .navbar-brand img{
+    height: 50px;
+}
 .header .nav-styles.nav-up {
     padding: 10px 0;
 }
@@ -1033,8 +1035,8 @@ footer hr {
 .special_area{
     background-color: #00bcd5;
     padding: 25px 0;
-    margin-bottom: 10px;
-}
+/*     margin-bottom: 10px;
+ */}
 .special_area_dark{
     background-color: #282828;
     padding: 25px 0;
@@ -1048,4 +1050,7 @@ footer hr {
     padding: 10px;
     margin: 8px;
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,.2);
+}
+.main_content{
+    padding: 30px 0;
 }

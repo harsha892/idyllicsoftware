@@ -11,6 +11,7 @@
     <link href="styles/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="styles/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="styles/styles.css" rel="stylesheet" type="text/css">
+    <script src="js/w3data.js"></script>
     <style>
     .carousel-inner>.item>img {
         width: 100%;
@@ -24,7 +25,7 @@
         <div w3-include-html="shared/header.html"></div>
         <!-- HOME SECTION -->
         <section id="home">
-            <div class="slider_container">
+            <div class="slider_container" id="datascience">
                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
                         <div class="item active">
@@ -330,7 +331,7 @@
                                     </div>
                                 </div>
                                 <!-- <div class="button_line button_line_4"><a href="#">send<i class="material-icons">keyboard_arrow_right</i></a></div> -->
-                                <button type="submit" class="submit_btn button_line_4" value="Submit">send</button>
+                                <button type="submit" class="submit_btn button_line_4 form_contact_submit" value="Submit">send</button>
                             </div>
                             <div class="clear"></div>
                         </div>
@@ -340,14 +341,82 @@
         </section>
         <div w3-include-html="shared/footer.html"></div>
     </div>
-    <script src="js/w3data.js"></script>
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/bootstrap.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/contact-form.js"></script>
     <script>
     $('.carousel').carousel({
         interval: 2000
-    })
+    });
+    (function($) {
+        /*$("body").on("click", ".form_contact_submit", function(e) {
+            e.stopPropogation();
+            e.preventDefault();
+
+        });*/
+
+        var $contactForm = $("#contact-form");
+        var $requiredFlieds = $contactForm.find(".required");
+        var $submitBtn = $contactForm.find(".form_contact_submit");
+
+        $requiredFlieds.on("blur change", function(e) {
+            var value = $.trim($(this).val());
+            var $error = $(this).siblings('.error');
+            $error.addClass('hide');
+            if (!value || value == undefined) {
+                $error.removeClass('hide');
+                return false;
+            }
+        });
+
+        $submitBtn.on("click", function(e) {
+            e.stopPropagation();
+            e.preventDefault();
+            var isValid = true;
+            $requiredFlieds.each(function(e) {
+                var value = $.trim($(this).val());
+                var $error = $(this).siblings('.error');
+                $error.addClass('hide');
+                if (!value || value == undefined) {
+                    $error.removeClass('hide');
+                    isValid = false;
+                }
+            });
+
+            if (isValid) {
+                submitForm($contactForm)
+            }
+        });
+
+        function submitForm($form) {
+            var params = $form.serialize();
+            console.log("params", params);
+            $.ajax({
+                    url: 'mail.php',
+                    type: 'POST',
+                    data: params,
+                })
+                .done(function(response) {
+                    $(".contact_success").text(response).removeClass('hide');
+                    setTimeout(function() {
+                        $requiredFlieds.each(function() {
+                            $(this).val("");
+                            $(this).siblings(".error").addClass('hide');
+                            $(".contact_success").text("").addClass('hide');
+                        })
+                    }, 3000)
+                    console.log("success");
+                })
+                .fail(function() {
+                    console.log("error");
+                })
+                .always(function() {
+                    console.log("complete");
+                });
+
+        }
+    })(jQuery)
     </script>
 </body>
 
